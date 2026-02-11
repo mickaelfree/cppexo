@@ -6,7 +6,7 @@
 /*   By: mickmart <mickmart@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 18:44:39 by mickmart          #+#    #+#             */
-/*   Updated: 2026/01/23 21:47:19 by mickmart         ###   ########.fr       */
+/*   Updated: 2026/02/11 02:37:37 by mickmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 
 PhoneBook::PhoneBook() : _index(0) {};
-std::string truncate(const std::string &str)
+std::string truncate(const std::string& str)
 {
     if (str.length() > 10)
         return (str.substr(0, 9) + ".");
@@ -106,12 +106,9 @@ void PhoneBook::searchContact()
     for (int i = 0; i < _index && i < 8; i++)
     {
         std::cout << std::setw(10) << i << "|";
-        std::cout << std::setw(10) << truncate(_contacts[i].getFirstName())
-                  << "|";
-        std::cout << std::setw(10) << truncate(_contacts[i].getLastName())
-                  << "|";
-        std::cout << std::setw(10) << truncate(_contacts[i].getNickName())
-                  << std::endl;
+        std::cout << std::setw(10) << truncate(_contacts[i].getFirstName()) << "|";
+        std::cout << std::setw(10) << truncate(_contacts[i].getLastName()) << "|";
+        std::cout << std::setw(10) << truncate(_contacts[i].getNickName()) << std::endl;
     }
     std::cout << "Enter index: ";
     if (!std::getline(std::cin, input))
@@ -130,8 +127,6 @@ void PhoneBook::searchContact()
     std::cout << "First name: " << _contacts[index].getFirstName() << std::endl;
     std::cout << "Last name: " << _contacts[index].getLastName() << std::endl;
     std::cout << "Nickname: " << _contacts[index].getNickName() << std::endl;
-    std::cout << "Phone number: " << _contacts[index].getPhoneNumber()
-              << std::endl;
-    std::cout << "Darkest secret: " << _contacts[index].getDarkestSecret()
-              << std::endl;
+    std::cout << "Phone number: " << _contacts[index].getPhoneNumber() << std::endl;
+    std::cout << "Darkest secret: " << _contacts[index].getDarkestSecret() << std::endl;
 }

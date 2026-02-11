@@ -1,7 +1,7 @@
 NAME = phonebook 
 
-CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+C = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = phonebook.cpp main.cpp Contact.cpp
 HEADERS = phonebook.hpp Contact.hpp
@@ -10,10 +10,10 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS)  -o $(NAME) 
+	$(C) $(CFLAGS) $(OBJS)  -o $(NAME) 
 
 %.o: %.cpp $(HEADERS)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(C) $(CFLAGS) -c $< -o $@
 clean:
 	rm -f $(OBJS)
 
