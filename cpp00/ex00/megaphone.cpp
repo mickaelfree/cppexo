@@ -6,7 +6,7 @@
 /*   By: mickmart <mickmart@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 18:41:53 by mickmart          #+#    #+#             */
-/*   Updated: 2026/02/11 02:39:28 by mickmart         ###   ########.fr       */
+/*   Updated: 2026/02/11 03:17:23 by mickmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(int argc, char** argv)
     for (int i = 1; i < argc; i++)
     {
         std::string x = argv[i];
-        for (int j = 0; j < x.length(); j++)
+        for (size_t j = 0; j < x.length(); j++)
             x[j] = toupper(x[j]);
         std::cout << x;
     }
