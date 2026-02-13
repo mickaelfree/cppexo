@@ -3,8 +3,8 @@ NAME = phonebook
 C = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = phonebook.cpp main.cpp Contact.cpp
-HEADERS = phonebook.hpp Contact.hpp
+SRCS = Phonebook.cpp main.cpp Contact.cpp
+HEADERS = Phonebook.hpp Contact.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

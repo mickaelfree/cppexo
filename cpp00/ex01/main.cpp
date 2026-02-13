@@ -18,7 +18,7 @@ int main(void)
 
     while (1)
     {
-        std::cout << "\nCommands: ADD, SEARCH, EXIT> " << std::endl;
+        std::cout << "\nCommands: ADD, SEARCH, EXIT" << std::endl;
         if (!std::getline(std::cin, command))
         {
             std::cout << "Error: getline failed\n";
