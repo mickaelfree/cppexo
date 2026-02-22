@@ -3,8 +3,8 @@ NAME = zombie
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp zombie.cpp newZombie.cpp randomChump.cpp
-HEADERS = zombie.hpp
+SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+HEADERS = Zombie.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

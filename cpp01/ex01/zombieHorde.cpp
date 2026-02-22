@@ -20,7 +20,11 @@ Zombie *zombieHorde(int N, std::string name)
     return NULL;
   }
   Zombie *horde = new Zombie[N];
-
+  if (horde == NULL)
+  {
+    std::cerr << "Error: Memory allocation failed" << std::endl;
+    return NULL;
+  }
   for (int i = 0; i < N; i++)
     horde[i].setName(name);
   return horde;
