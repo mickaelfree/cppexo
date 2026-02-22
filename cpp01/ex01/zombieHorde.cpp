@@ -14,12 +14,14 @@
 
 Zombie *zombieHorde(int N, std::string name)
 {
-    Zombie *horde = new Zombie[N];
+  if (N <= 0)
+  {
+    std::cerr <<  "Error: N must be greater than 0" << std::endl;
+    return NULL;
+  }
+  Zombie *horde = new Zombie[N];
 
-    for (int i = 0; i < N; i++)
-    {
-        horde[i].setName(name);
-    }
-
-    return horde;
+  for (int i = 0; i < N; i++)
+    horde[i].setName(name);
+  return horde;
 }
