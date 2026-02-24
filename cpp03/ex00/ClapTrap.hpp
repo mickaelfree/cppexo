@@ -6,7 +6,7 @@
 /*   By: mickmart <mickmart@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 19:02:50 by mickmart          #+#    #+#             */
-/*   Updated: 2026/02/07 05:31:48 by mickmart         ###   ########.fr       */
+/*   Updated: 2026/02/24 20:54:12 by mickmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ClapTrap
     unsigned int _attackDamage;
 
   public:
+    ClapTrap();
     ClapTrap(std::string name);
     ClapTrap(const ClapTrap& other);
     ClapTrap& operator=(const ClapTrap& other);
